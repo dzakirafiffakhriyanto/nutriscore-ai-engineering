@@ -35,6 +35,26 @@ Notebook yang diunggah sebelumnya menyimpan output eksekusi dengan scikit-learn 
 
 Di notebook versi `NutriScore_Supervised_Learning_Stage1_Ready.ipynb`, cell ekspor Tahap 1 mengambil nilai hyperparameter penuh dari `search_hgb.best_params_` pada runtime notebook yang sedang digunakan. Dengan demikian, jika ingin mempertahankan lingkungan eksekusi notebook sebelumnya, jalankan semua cell di runtime tersebut dan ekspor dari sana.
 
+## API Testing
+
+Automated API tests are implemented using Pytest and FastAPI TestClient.
+
+Test coverage includes:
+- Health endpoint validation
+- Successful prediction requests
+- Negative nutritional value rejection
+- Nutritional consistency validation
+- Required allergen indicator validation
+- Empty nutritional input rejection
+
+**Test Result:** 7 passed, 0 failed.
+
+Run tests locally:
+
+```bash
+python -m pytest -v
+```
+
 ## Batasan model
 
 Model memperkirakan label berdasarkan pola dataset proyek. Model ini bukan implementasi lengkap kalkulator resmi Nutri-Score. Skor kelas (`predict_proba`) juga belum dinyatakan terkalibrasi.
