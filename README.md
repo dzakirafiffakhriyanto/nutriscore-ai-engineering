@@ -12,6 +12,39 @@ This project demonstrates the complete workflow of developing a Machine Learning
 
 ---
 
+# Dataset Sources
+
+This project uses the following datasets from Kaggle as the raw data sources for the NutriScore classification pipeline.
+
+## Source Dataset
+
+**Global Food & Nutrition Database 2026**
+
+- **Platform:** Kaggle
+- **Publisher:** ahsanneural
+- **Dataset URL:** https://www.kaggle.com/datasets/ahsanneural/global-food-and-nutrition-database-2026
+
+### Files Used
+
+The following CSV files were used:
+
+1. `foods_health_scores_allergens.csv`
+2. `foods_dietary_restrictions.csv`
+
+### Usage in This Project
+
+These datasets serve as the raw data sources for exploratory data analysis (EDA), data cleaning, preprocessing, and the development of the NutriScore classification model.
+
+The datasets were processed and combined as part of the project workflow to produce the final dataset used for model development.
+
+### Data Availability
+
+The original CSV files are not included in this repository. Please download them directly from the original Kaggle source.
+
+**Note:** Users must comply with the original dataset's license and terms of use when accessing or redistributing the data.
+
+---
+
 ## Project Overview
 
 This project extends a supervised Machine Learning workflow into a publicly accessible AI application.
