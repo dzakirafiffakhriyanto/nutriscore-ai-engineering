@@ -292,7 +292,7 @@ Potential improvements include:
 
 ## Author
 
-**YOUR NAME**
+**DZAKI RAFIF FAKHRIYANTO**
 
 Machine Learning | Data Science | AI Engineering
 
@@ -301,3 +301,14 @@ GitHub: `https://github.com/YOUR_USERNAME`
 ---
 
 *This project demonstrates the transition from a supervised Machine Learning model to a containerized, API-based application..*
+
+## Live Deployment
+
+The Nutri-Score API is publicly deployed using Vercel.
+
+- **Live API:** https://nutriscore-ai-engineering.vercel.app
+- **Health Check:** https://nutriscore-ai-engineering.vercel.app/health
+- **Interactive API Documentation:** https://nutriscore-ai-engineering.vercel.app/docs
+
+Users can interact with the prediction endpoint through Swagger UI
+without installing the application locally.
