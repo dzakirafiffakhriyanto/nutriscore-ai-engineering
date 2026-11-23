@@ -137,3 +137,13 @@ def predict(product: Product):
             "penilaian atau perhitungan resmi Nutri-Score."
         ),
     }
+
+@app.get("/")
+def root():
+    return {
+        "project": "Nutri-Score AI Engineering",
+        "description": "Machine Learning API for Nutri-Score prediction",
+        "status": "online",
+        "documentation": "/docs",
+        "health": "/health"
+    }
