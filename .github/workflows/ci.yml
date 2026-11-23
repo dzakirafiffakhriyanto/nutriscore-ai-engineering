@@ -39,30 +39,6 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install -r requirements-dev.txt
 
-      - name: Debug model artifact
-        run: |
-          echo "===== CURRENT DIRECTORY ====="
-          pwd
-
-          echo "===== ROOT FILES ====="
-          ls -la
-
-          echo "===== EXPECTED MODEL DIRECTORY ====="
-          if [ -d outputs_nutriscore ]; then
-            ls -lah outputs_nutriscore
-          else
-            echo "DIRECTORY outputs_nutriscore NOT FOUND"
-          fi
-
-          echo "===== SEARCH MODEL FILES ====="
-          find . -type f \( -iname "*.joblib" -o -iname "*nutriscore*" \) -print
-
-          echo "===== GIT TRACKED FILES ====="
-          git ls-files | grep -iE 'outputs|joblib' || true
-
-          echo "===== CHECK EXPECTED MODEL PATH ====="
-          python -c "from pathlib import Path; p=Path('outputs_nutriscore/nutriscore_pipeline.joblib'); print('Expected:', p.resolve()); print('Exists:', p.exists()); print('Is file:', p.is_file())"
-
       - name: Run API tests
         run: python -m pytest -v
 
