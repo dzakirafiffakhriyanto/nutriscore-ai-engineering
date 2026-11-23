@@ -1,0 +1,9 @@
+Langkah,Jumlah terdampak,Keterangan,Alasan
+Normalisasi tipe data,22,-,"Kolom gizi/NOVA dijadikan numerik, alergen dijadikan 0/1 (database menyimpan semuanya sebagai teks)"
+Standardisasi teks,kolom teks,-,Spasi/huruf kapital diseragamkan agar kategori tidak terpecah
+Buang label tidak valid,137,137 baris,Target harus A-E agar bisa dievaluasi
+Buang duplikat penuh,478,478 baris,Duplikat menggelembungkan skor evaluasi
+Nilai gizi mustahil -> NaN,33,33 sel,"Aturan fisik: <=100 g/100 g, energi <=900 kcal, lemak jenuh <= lemak, gula <= karbohidrat"
+Buang baris tanpa data gizi,32,32 baris,Tidak ada sinyal untuk diprediksi
+Ecoscore UNKNOWN/NOT-APPLICABLE -> NaN,789,-,"Dipakai hanya pada skenario ablasi, bukan model utama"
+Hasil akhir,4405,"dari 5,052 -> 4,405 baris","4,237 grup produk-merek unik"

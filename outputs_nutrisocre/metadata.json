@@ -1,0 +1,133 @@
+{
+  "project": "NutriScore Grade Estimator",
+  "created_at": "2026-11-23T00:10:27+00:00",
+  "model_name": "Ordinal-HGB (tuned)",
+  "estimator": "OrdinalClassifier(HistGradientBoostingClassifier)",
+  "selection_metric": "f1_macro_mean",
+  "best_cv_metrics": {
+    "accuracy_mean": 0.8403,
+    "f1_macro_mean": 0.8337,
+    "f1_macro_std": 0.0126,
+    "balanced_accuracy_mean": 0.8339,
+    "qwk_mean": 0.9405
+  },
+  "training_parameters_hgb": {
+    "l2_regularization": 0.2801635158716261,
+    "learning_rate": 0.027575529238707534,
+    "max_iter": 500,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 20
+  },
+  "random_seed": 42,
+  "class_order": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "class_encoding": {
+    "A": 0,
+    "B": 1,
+    "C": 2,
+    "D": 3,
+    "E": 4
+  },
+  "n_train": 3525,
+  "n_test": 880,
+  "n_train_groups": 3388,
+  "n_test_groups": 849,
+  "train_test_group_overlap": 0,
+  "input_columns": [
+    "energy_kcal",
+    "fat_100g",
+    "saturated_fat_100g",
+    "carbs_100g",
+    "sugars_100g",
+    "fiber_100g",
+    "proteins_100g",
+    "salt_100g",
+    "sodium_100g",
+    "categories",
+    "contains_gluten",
+    "contains_dairy",
+    "contains_nuts",
+    "contains_soy",
+    "contains_eggs",
+    "contains_fish"
+  ],
+  "numeric_features": [
+    "energy_kcal",
+    "fat_100g",
+    "saturated_fat_100g",
+    "carbs_100g",
+    "sugars_100g",
+    "fiber_100g",
+    "proteins_100g",
+    "salt_100g",
+    "sodium_100g",
+    "sugar_to_carb",
+    "sat_to_fat",
+    "macro_sum",
+    "fiber_missing",
+    "p_energy",
+    "p_sugar",
+    "p_satfat",
+    "p_sodium",
+    "p_fiber",
+    "p_protein",
+    "neg_points",
+    "pos_points",
+    "nutri_points",
+    "is_beverage",
+    "is_water",
+    "is_cheese",
+    "is_fat_oil",
+    "is_fruitveg",
+    "is_dairy",
+    "is_snack",
+    "is_cereal",
+    "is_sweet",
+    "contains_gluten",
+    "contains_dairy",
+    "contains_nuts",
+    "contains_soy",
+    "contains_eggs",
+    "contains_fish"
+  ],
+  "categorical_features": [
+    "main_category"
+  ],
+  "test_metrics": {
+    "accuracy": 0.8364,
+    "macro_f1": 0.8326,
+    "weighted_f1": 0.8367,
+    "balanced_accuracy": 0.8333,
+    "qwk": 0.9381,
+    "mae_grade_steps": 0.1886,
+    "within_1_grade": 0.9761
+  },
+  "confidence_intervals_95": {
+    "macro_f1": [
+      0.8094,
+      0.8589
+    ],
+    "accuracy": [
+      0.8139,
+      0.8625
+    ]
+  },
+  "runtime_versions": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.6.0"
+  },
+  "model_limitations": [
+    "Model memperkirakan label berdasarkan pola pada dataset proyek.",
+    "Bukan implementasi lengkap algoritma resmi Nutri-Score.",
+    "Class scores belum dinyatakan terkalibrasi."
+  ],
+  "artifact_file": "nutriscore_pipeline.joblib"
+}
