@@ -1,5 +1,7 @@
 # Nutri-Score AI Engineering
 
+![Nutri-Score CI](https://github.com/dzakirafiffakhriyanto/nutriscore-ai-engineering/actions/workflows/ci.yml/badge.svg?branch=main)
+
 An end-to-end Machine Learning deployment project that transforms a supervised Nutri-Score classification model into a REST API using **FastAPI** and **Docker**.
 
 This repository focuses on the engineering side of a Machine Learning project: model artifact management, API development, input validation, automated testing, and containerization.
