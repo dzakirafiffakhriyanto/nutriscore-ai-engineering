@@ -1,0 +1,76 @@
+
+# Dataset Documentation
+
+## 1. Dataset Overview
+
+This project uses a master dataset containing packaged food product information, nutritional composition, product categories, allergen information, and Nutri-Score grade labels.
+
+The target variable is `nutriscore_grade`, with five ordinal classes:
+
+- A
+- B
+- C
+- D
+- E
+
+## 2. Data Sources and Integration
+
+According to the project notebook, the master dataset was prepared by integrating two source datasets:
+
+- `foods_health_scores_allergens`
+- `foods_dietary_restrictions`
+
+The integrated dataset is stored as a master table named `nutriscore_master`.
+
+The source integration process is upstream of the current Machine Learning notebook and is not fully reproduced in this repository.
+
+## 3. Expected Input Files
+
+The notebook supports two input formats:
+
+**Option 1: SQLite Database**
+
+`datawrangling_fix_supervised.db`
+
+The database must contain a table named:
+
+`nutriscore_master`
+
+**Option 2: CSV File**
+
+`nutriscore_master.csv`
+
+The CSV file should contain the required target, product, nutritional, category, and allergen columns used by the notebook.
+
+## 4. Dataset Snapshot
+
+The recorded notebook execution reported:
+
+- Number of records: 5,052
+- Number of columns: 22
+- Target variable: `nutriscore_grade`
+
+This snapshot describes the dataset used in the recorded experiment. It is not a guarantee that every future dataset version will have identical dimensions.
+
+## 5. Reproducibility
+
+To reproduce the Machine Learning workflow:
+
+1. Obtain the original source datasets.
+2. Verify their provenance and permitted usage.
+3. Reproduce the upstream integration into `nutriscore_master`.
+4. Save the result as `nutriscore_master.csv` or as the `nutriscore_master` table in the expected SQLite database.
+5. Place the input file in the working directory or supported data directory.
+6. Run the Machine Learning notebook.
+
+## 6. Data Provenance and Licensing
+
+The exact source URLs, retrieval dates, dataset versions, and redistribution terms must be verified against the original data providers before redistributing the source data.
+
+This repository documents the expected dataset structure and processing requirements. It does not claim ownership of third-party source data.
+
+## 7. Important Limitations
+
+The dataset contains recorded Nutri-Score labels used as supervised learning targets.
+
+The trained model estimates patterns present in those labels. It does not independently verify product nutrition information and does not implement the complete official Nutri-Score calculation algorithm.
