@@ -300,4 +300,4 @@ GitHub: `https://github.com/YOUR_USERNAME`
 
 ---
 
-*This project demonstrates the transition from a supervised Machine Learning model to a containerized, API-based application.*
+*This project demonstrates the transition from a supervised Machine Learning model to a containerized, API-based application..*
